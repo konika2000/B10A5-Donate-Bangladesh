@@ -3,9 +3,9 @@ event.preventDefault();
 const donateForNoakhali = getInputFieldValueById('input-donation');
 const accountBalance=getTextFieldValueById("account-balance");
 if(typeof donateForNoakhali === "number" && !isNaN(donateForNoakhali) && (donateForNoakhali >0) && (donateForNoakhali <= accountBalance)){
-   const nBalance = getTextFieldValueById('noakhali-acc-blnc');
-   const NnewBalance = nBalance + donateForNoakhali;
-   document.getElementById('noakhali-acc-blnc').innerText = NnewBalance;
+   const fBalance = getTextFieldValueById('noakhali-acc-blnc');
+   const fNewBalance = fBalance + donateForNoakhali;
+   document.getElementById('noakhali-acc-blnc').innerText = fNewBalance;
 
   
   const newBalance =accountBalance - donateForNoakhali;
