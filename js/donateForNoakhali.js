@@ -7,11 +7,18 @@ if(typeof donateForNoakhali === "number" && !isNaN(donateForNoakhali) && (donate
    const fNewBalance = fBalance + donateForNoakhali;
    document.getElementById('noakhali-acc-blnc').innerText = fNewBalance;
 
-  
   const newBalance =accountBalance - donateForNoakhali;
   document.getElementById('account-balance').innerText = newBalance;
+  
+  alert('Congratulations!')
+ 
+  const p = document.createElement ('p');
+   p.innerText = `${donateForNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh `;
+   console.log(p);
+   document.getElementById('history-container').appendChild(p);
+
 }
 else{
-    alert('Wrong Input')
+    alert('Invalid Donation Amount')
 }
 });
