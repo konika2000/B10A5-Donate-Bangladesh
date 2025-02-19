@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-   <header class="sticky">
+   <header>
     <nav class="max-w-full bg-yellow-50">
       <div class="flex justify-between">
         <div>
@@ -26,8 +26,8 @@
     </nav>
     <banner>
         <div class="flex justify-center gap-4 py-8">
-            <button id="show-donation-section" class="text-xl font-medium rounded-md px-6 py-2 text-gray-500 border-2  bg-lime-300-hidden">Donation</button>
-            <button id="show-history-section" class="text-xl font-medium text-gray-500 border-2 rounded px-4 bg-lime-300-hidden">History</button>
+            <button id="show-donation-section" class="text-xl font-medium rounded-md px-6 py-2 text-gray-500 border-2 bg-lime-300 ">Donation</button>
+            <button id="show-history-section" class="text-xl font-medium text-gray-500 border-2 rounded px-4 bg-lime-300-hidden bg-lime-300">History</button>
         </div>
     </banner>
    </header> 
@@ -86,7 +86,7 @@
        <div id="history-section" class="hidden">
          <!-- transaction starts -->
          <div id="transaction-section" class="">
-          <div id="history-container"  class="text-xl font-bold border-2 m-6 p-6 rounded-md gap-4">
+          <div id="history-container">
 
           </div>
          </div>
@@ -94,7 +94,22 @@
        </div>
 
    </main>
+
    <footer class="max-w-full h-24 mt-8 bg-yellow-50"></footer>
+
+   <dialog id="show-modal-btn" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold text-center">Congrates!</h3>
+      <img class="mx-auto w-10 py-5" src="assets/coin.png" alt="">
+      <p class="py-4 text-center">You Have Donate for Humankind</p>
+      <h3 class="text-xl font-bold text-center">Successfully</h3>
+      <div class="modal-action justify-center">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close confirmation</button>
+        </form>
+      </div>
+    </div>
 
    <script src="js/donateForNoakhali.js"></script>
    <script src="js/utility.js"></script>

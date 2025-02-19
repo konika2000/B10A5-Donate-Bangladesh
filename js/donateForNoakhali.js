@@ -9,13 +9,15 @@ if(typeof donateForNoakhali === "number" && !isNaN(donateForNoakhali) && (donate
 
   const newBalance =accountBalance - donateForNoakhali;
   document.getElementById('account-balance').innerText = newBalance;
-  
-  alert('Congratulations!')
  
-  const p = document.createElement ('p');
-   p.innerText = `${donateForNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh `;
-   console.log(p);
-   document.getElementById('history-container').appendChild(p);
+   const historyEntry = document.createElement("div");
+   historyEntry.classList.add("border","p-4", "rounded-lg", "shadow-sm");
+   historyEntry.innerHTML= `
+   <h3 class="font-bold">${donateForNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh </h3>
+   <p>Date:${new Date().toLocaleString()} </p>`;
+   document.getElementById('history-container').appendChild(historyEntry);
+
+   document.getElementById('show-modal-btn').showModal();
 
 }
 else{

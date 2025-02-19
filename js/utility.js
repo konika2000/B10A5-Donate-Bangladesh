@@ -18,3 +18,13 @@ function showSectionById(id){
     
     document.getElementById(id).classList.remove('hidden');
 }
+
+function showModalById(id){
+    document.getElementById('btn-donate-now').classList.add('active')
+}
+function showModalById(id){
+    document.getElementById('btn-donate-nowf').classList.add('active')
+}
+function showModalById(id){
+    document.getElementById('btn-donate-nowa').classList.add('active')
+}

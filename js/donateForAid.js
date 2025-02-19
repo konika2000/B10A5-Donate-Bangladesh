@@ -7,15 +7,17 @@ if(typeof donateForAid === "number" && !isNaN(donateForAid) && (donateForAid >0)
    const aNewBalance = aBalance + donateForAid;
    document.getElementById('aid-acc-blnc').innerText = aNewBalance;
    
-   alert('Congratulations!')
-  
   const newBalance =accountBalance - donateForAid;
   document.getElementById('account-balance').innerText = newBalance;
 
-  const p = document.createElement ('p');
-   p.innerText = `${donateForAid} Taka is Donate for Aid for Injured in the Quota Movementi, Bangladesh `;
-   console.log(p);
-   document.getElementById('history-container').appendChild(p);
+   const historyEntry = document.createElement("div");
+   historyEntry.classList.add("border","p-4", "rounded-lg", "shadow-sm");
+   historyEntry.innerHTML= `
+   <h3 class="font-bold">${donateForAid} Taka is Donate for Aid for Injured in the Quota Movement, Bangladesh </h3>
+   <p>Date:${new Date().toLocaleString()} </p>`;
+   document.getElementById('history-container').appendChild(historyEntry);
+
+   document.getElementById('show-modal-btn').showModal();
 }
 else{
     alert('Invalid Donation Amount')

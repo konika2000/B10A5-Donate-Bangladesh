@@ -7,15 +7,17 @@ if(typeof donateForFeni === "number" && !isNaN(donateForFeni) && (donateForFeni 
    const fNewBalance = fBalance + donateForFeni;
    document.getElementById('feni-acc-blnc').innerText = fNewBalance;
    
-   alert('Congratulations!')
-  
   const newBalance =accountBalance - donateForFeni;
   document.getElementById('account-balance').innerText = newBalance;
 
-  const p = document.createElement ('p');
-   p.innerText = `${donateForFeni} Taka is Donate for Flood Relief in Feni, Bangladesh `;
-   console.log(p);
-   document.getElementById('history-container').appendChild(p);
+   const historyEntry = document.createElement("div");
+   historyEntry.classList.add("border","p-4", "rounded-lg", "shadow-sm");
+   historyEntry.innerHTML= `
+   <h3 class="font-bold">${donateForFeni} Taka is Donate for Flood Relief in Feni, Bangladesh </h3>
+   <p>Date:${new Date().toLocaleString()} </p>`;
+   document.getElementById('history-container').appendChild(historyEntry);
+
+   document.getElementById('show-modal-btn').showModal();
 }
 else{
     alert('Invalid Donation Amount')
